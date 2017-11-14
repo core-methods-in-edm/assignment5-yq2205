@@ -54,6 +54,7 @@ plot(score_ctree)
 
 # Question: Please interpret the tree, which two behaviors do you think the teacher should most closely pay attemtion to?
 # Answer: from the tree, students do not request hints from teachers with lowerer prior correct percent should be paied the most attention.
+# Not sure about the intepretation. 
 ```
 ```{r}
 #Test Tree Upload the data "intelligent_tutor_new.csv". This is a data set of a differnt sample of students doing the same problems in the same system. We can use the tree we built for the previous data set to try to predict the "advice" we should give the teacher about these new students.
