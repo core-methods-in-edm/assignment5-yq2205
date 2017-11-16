@@ -71,18 +71,16 @@ D2$prediction <- predict(score_ctree, D2)
 #PART III
 #Compare the predicted advice with the actual advice that these studnts recieved. What is the difference between the observed and predicted results?
 #recode the predicted advice
-D1$advice[D1$advice=="no action"]<-3
-D1$advice[D1$advice=="monitor"]<-1
-D1$advice[D1$advice=="intervene"]<-2
+D1$prediction <- predict(score_ctree, D1)
 
 ```
 
 ```{r}
 #compare actual and predicted
-D3<-ifelse(D1$action==D1$advice,1,0)
+D3<-ifelse(D1$advice==D1$prediction,1,0)
 sum(D3)
 
-#After comparing the differences of the actual and predicted advice, I found 128 out of 378 observations are different.
+#After comparing the differences of the actual and predicted advice, I found 206 out of 378 observations are the same; in other words, around 46% of the prediction is wrong. 
 ```
 
 
